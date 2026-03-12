@@ -2,11 +2,11 @@
 
 Companion scripts for the paper:
 
-> **The Braun-Candelas-Davies Calabi-Yau: Complete Intersection Ring,
-> Picard-Fuchs Structure, and Gopakumar-Vafa Invariants**
+> **Topology of the Braun–Candelas–Davies Calabi–Yau: Intersection Ring and Enumerative Invariants**
+> Dean Brown (2026). Zenodo. https://doi.org/10.5281/zenodo.18985060
 
 These 12 self-contained Python scripts reproduce every computational
-claim in the paper.  Each script prints a derivation narrative to stdout
+claim in the paper. Each script prints a derivation narrative to stdout
 with numbered `[PASS]`/`[FAIL]` assertions and a final summary line.
 
 ## Requirements
@@ -26,7 +26,7 @@ Every script is standalone with no local imports:
 python <scriptname>.py
 ```
 
-All assertions should print `[PASS]`.  A summary line at the end
+All assertions should print `[PASS]`. A summary line at the end
 reports the total, e.g. `ALL 27 ASSERTIONS PASSED.`
 
 ## Script Inventory
@@ -49,24 +49,27 @@ reports the total, e.g. `ALL 27 ASSERTIONS PASSED.`
 
 ## The BCD Manifold
 
-The Braun-Candelas-Davies (BCD) Calabi-Yau threefold X is defined as
+The Braun–Candelas–Davies (BCD) Calabi–Yau threefold X is defined as
 the free quotient Y / Dic₃, where Y is a CICY embedded in (ℙ²)⁴ and
-Dic₃ is the dicyclic group of order 12.  The Hodge numbers are
+Dic₃ is the dicyclic group of order 12. The Hodge numbers are
 (h¹'¹, h²'¹) = (1, 4), Euler characteristic χ = -6, and the toric
 triple intersection number is d₁₁₁ = 18.
 
-The complete intersection ring on the mirror has 5 nonzero entries
-out of 20:
+The intersection ring on the mirror has 5 nonzero entries out of 20:
 
 | Entry | Value | Method |
 |-------|-------|--------|
-| d₁₁₁ | 18 | Direct computation + Poincaré duality |
+| d₁₁₁ | 18 | Adjunction formula |
 | d₂₂₃ | 2 | GL(3,ℂ) Yukawa + discriminant orbit |
-| d₂₃₃ | 8 | Wronskian-constrained mirror map (weakly preferred) |
+| d₂₃₃ | {6, 8}, nominal 8 | Wronskian-constrained mirror map (weakly preferred) |
 | d₃₃₃ | 12 | HRR integrality + Schur's lemma |
 | d₁₄₄ | 6 | Covering CICY + Dic₃ irrep projection |
 
 ## License
 
-These scripts are provided for scientific reproducibility.  If you use
-them in your own work, please cite the accompanying paper.
+These scripts are provided for scientific reproducibility. If you use
+them in your own work, please cite the accompanying paper:
+
+Brown, D. (2026). Topology of the Braun–Candelas–Davies Calabi–Yau:
+Intersection Ring and Enumerative Invariants. Zenodo.
+https://doi.org/10.5281/zenodo.18985060
